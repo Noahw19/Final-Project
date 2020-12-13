@@ -1,0 +1,32 @@
+<%- include('../partials/header'); %>
+
+<%- include('../partials/menu'); %>
+<div class="container">
+    <br>
+    <div class="page_reviews">
+      <h1 class="display-4">College Reviews</h1>
+    </div>
+    
+    <table class="table table-bordered" id="stats_table">
+        <tr>
+            <th class="align-bottom" rowspan="2">Review #</th>
+            <th class="align-bottom"rowspan="2">College</th>
+            <th class="text-center" colspan="2">Review</th>
+            <th class="align-bottom" rowspan="2">Review Date</th>
+        </tr>
+        <% if (Reviews1) { 
+            var Review_rows = '';
+            Reviews1.forEach(function(item){
+                Review_rows  += '<tr><td>' + document.getElementById(counter)+ '</td>';
+                Review_rows  += '<td>' + document.getElementById(review_itself) + '</td>';
+                Review_rows  += '<td>' + document.getElementById(counter) + '</td>';
+                Review_rows  += '<td>' + document.getElementById(today) + '</td>';
+            });%>
+            document.getElementById(UniName1)
+            document.getElementById(counter)
+        <%- Review_rows %>
+        <% } %>
+    </table>
+    <br>
+</div>
+  <%- include('../partials/footer'); %>
